@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>As Keen As Mustard — Long Eaton 2020 — Söuthsea Swimrun</title>
+<title>As Keen As Mustard - Long Eaton / Nottingham 2020 — Söuthsea Swimrun</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-
 <style>
 :root{--black:#080808;--white:#ffffff;--accent:#00D44A;--accent-light:#00eb52;--accent-pale:#e6fff0;--sand:#f0f0f0;--sand-dark:#d0d0d0;--text-muted:#555555;--radius:4px;--font-display:'Bebas Neue',sans-serif;--font-body:'DM Sans',sans-serif;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -19,27 +18,31 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .nav-links a{font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,242,235,0.7);text-decoration:none;transition:color 0.2s;}
 .nav-links a:hover{color:var(--white);}
 .nav-cta{background:var(--accent)!important;color:var(--white)!important;padding:0.4rem 1rem;border-radius:var(--radius);}
-.hero{min-height:55vh;background:var(--black);display:flex;flex-direction:column;justify-content:flex-end;padding:0 2.5rem 3.5rem;position:relative;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0.3;}
+.hero{min-height:50vh;background:var(--black);display:flex;flex-direction:column;justify-content:flex-end;padding:0 2.5rem 3.5rem;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0.35;}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,1) 0%,rgba(8,8,8,0.5) 50%,rgba(8,8,8,0.15) 100%);}
 .hero-inner{position:relative;max-width:860px;}
 .hero-tag{display:inline-block;font-size:0.65rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:0.2rem 0.7rem;border-radius:var(--radius);margin-bottom:1rem;}
 .hero-title{font-family:var(--font-display);font-size:clamp(2.5rem,6vw,4.5rem);color:var(--white);line-height:1;letter-spacing:0.02em;margin-bottom:0.75rem;}
 .hero-year{font-size:0.8rem;color:rgba(255,255,255,0.35);font-weight:300;letter-spacing:0.1em;}
-.hero-nobg{background:#111;}
-article{max-width:720px;margin:0 auto;padding:4rem 2rem 6rem;}
+article{max-width:760px;margin:0 auto;padding:4rem 2rem 6rem;}
 article p{color:#333;font-size:1rem;line-height:1.85;margin-bottom:1.4rem;font-weight:300;}
-article h2{font-family:var(--font-display);font-size:1.8rem;letter-spacing:0.02em;margin:2.5rem 0 1rem;color:var(--black);}
-article h3,article h4{font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.02em;margin:2rem 0 0.75rem;color:var(--black);}
+article h2,article h3,article h4{font-family:var(--font-display);letter-spacing:0.02em;margin:2.5rem 0 1rem;color:var(--black);}
+article h2{font-size:2rem;}
+article h3{font-size:1.6rem;}
+article h4{font-size:1.3rem;}
 article img{width:100%;height:auto;border-radius:2px;margin:1.5rem 0;display:block;}
 article ul,article ol{padding-left:1.5rem;margin-bottom:1.4rem;}
 article li{color:#333;font-size:1rem;line-height:1.8;font-weight:300;margin-bottom:0.3rem;}
 article a{color:var(--accent);text-decoration:underline;text-underline-offset:3px;}
 article a:hover{color:var(--accent-light);}
-article em{font-style:italic;color:var(--text-muted);}
+article em{font-style:italic;}
 article strong{font-weight:500;}
+article blockquote{border-left:3px solid var(--accent);padding:0.5rem 1.5rem;margin:1.5rem 0;color:var(--text-muted);font-style:italic;}
+.img-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:0.75rem;margin:1.5rem 0;}
+.img-gallery img{margin:0;}
 .post-nav{border-top:1px solid var(--sand-dark);margin-top:3rem;padding-top:2rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
-.post-nav a{font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--black);text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;border-bottom:1px solid var(--black);padding-bottom:2px;transition:color 0.2s,border-color 0.2s;}
+.post-nav a{font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--black);text-decoration:none;border-bottom:1px solid var(--black);padding-bottom:2px;transition:color 0.2s;}
 .post-nav a:hover{color:var(--accent);border-color:var(--accent);}
 .post-nav a.back{color:var(--text-muted);border-color:var(--sand-dark);}
 footer{background:var(--black);padding:2rem 2.5rem;border-top:1px solid rgba(255,255,255,0.07);}
@@ -51,7 +54,6 @@ footer{background:var(--black);padding:2rem 2.5rem;border-top:1px solid rgba(255
 .footer-links a.green{color:var(--accent);}
 @media(max-width:768px){nav{padding:1rem 1.5rem;}.hero{padding:0 1.5rem 2.5rem;}article{padding:3rem 1.5rem 5rem;}footer{padding:1.5rem;}.nav-links li:not(:last-child){display:none;}}
 </style>
-
 </head>
 <body>
 <nav>
@@ -65,22 +67,103 @@ footer{background:var(--black);padding:2rem 2.5rem;border-top:1px solid rgba(255
   <div class="hero-bg" style="background-image:url('https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/sosblog-akam.jpg');"></div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <span class="hero-tag">Race Report · First-timer</span>
-    <h1 class="hero-title">As Keen As Mustard — Long Eaton 2020</h1>
-    <span class="hero-year">2020 · Söuthsea Swimrun</span>
+    <span class="hero-tag">Race Report · 2020</span>
+    <h1 class="hero-title">As Keen As Mustard - Long Eaton / Nottingham 2020</h1>
+    <span class="hero-year">Söuthsea Swimrun</span>
   </div>
 </div>
 <article>
-<p>I am not a runner. Having just competed in my first swimrun event, I thought I would write about the journey leading up to it — for anyone else out there who thinks this sport might not be for them.</p>
-<img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/sosblog-akam.jpg" alt="As Keen As Mustard Long Eaton 2020">
-<p>The <a href="https://www.akamustard.events" target="_blank">As Keen As Mustard</a> event at Long Eaton is held around the Attenborough Nature Reserve — a network of lakes and pathways that makes for a surprisingly technical and enjoyable swimrun course. The event is brilliantly organised and genuinely welcoming to first-timers.</p>
-<p>The swim sections were in calm, clear reservoir lakes — far less intimidating than open sea for a first event. The run sections connected the lakes through woodland and along the reservoir paths. The whole thing felt like an adventure rather than a race.</p>
-<p>What struck me most was the community. Experienced swimrunners chatting with first-timers, people helping each other with kit, everyone cheering everyone else across the finish. This sport is genuinely unique in how welcoming it is.</p>
-<p>Crossing the finish line of my first swimrun event, I understood immediately why people get hooked. It is not just about the racing. It is about the people, the places, and the particular satisfaction of doing something that genuinely tests you.</p>
-<p>If you are thinking about trying swimrun: just sign up. You will not regret it.</p>
-<p><em>By Adrian F.</em></p>
+<div></div>
+
+<h4><strong>I am not a runner.</strong></h4>
+
+<p>Having just competed in my first swimrun event, I thought I would write a bit about my journey leading up to this point as it might be of interest to people who are considering to give swimrun a try.</p>
+
+<p>I have never found running easy or naturally fun. I’ve always been more into my watersports, having played underwater hockey [aka. Octopush] for many years, and kitesurfing in the past. As soon as I started running, I would get that voice in my head that says ‘why are you doing this?’, ‘shall we just stop and turn around now?’ and that was just after 100m! A long run for me used to be Clarence Pier to Pyramids and back, probably not more than 3km.</p>
+
+<p>I went years not owning a pair of trainers…. Things have changed a bit now.</p>
+
+<p>When parkrun came along, that helped me get into running a bit more. It’s a lot easier when running with others, and 5km felt long enough to me. I started joining parkruns when I got a chance [which was not too often]; I still have some way to go before I earn my first parkrun t-shirt which says a bit. But now I have a young family, I am often doing more of the junior parkruns.</p>
+
+<p>A couple of years ago I decided I needed a change from Octopush and wanted some sort of challenge or goal to set for my 40th. A marathon just didn’t appeal, and as a non-runner, all the necessary run training did not sound like fun in my mind. My wife suggested triathlon, which I thought was a great idea [cut down the running bit and added some other sports in]. So I ended up joining the Mountbatten Gym and going to the triathlon sessions with Coach Trevor Payne which were included in the membership and met a great bunch of people to train with.</p>
+
+<p>I completed the Chichester Olympic distance triathlon in 2018. The swim section was just a 600m pool swim and the 10km run at the end was not easy, but I achieved a reasonable time which I was happy with. I have not done any more triathlon events since, but I kept up going to some of the triathlon training sessions to keep my fitness ticking over.</p>
+
+<p>In the last year a couple of things changed.</p>
+
+<p>Firstly, I discovered the joy of running whilst listening to podcasts!</p>
+
+<p>Previously, I have tried running with all sorts of music, but I would still get that voice in my head when running on my own. ‘That’s enough, turn back now!’…. I would rarely exceed the 5km run.</p>
+
+<p>With the podcasts, my mind was distracted. I found that I was beginning to run for longer and dare I say it, possibly even enjoying it!</p>
+
+<p>I set myself the goal at the start of this year of trying to run a half-marathon distance [just at my own pace, not entering an event]. I started venturing further, trying different routes in the countryside and enjoying the exploration and connecting with the environment aspect of these runs. All the while, listening to my podcasts.</p>
+
+<p>I did my first 25km run on the 28th June. All round to Hayling Island, with a nutrition stop for ice cream and a ferry crossing included!</p>
+
+<p>Secondly, it was whilst listening to one of my podcasts that I first heard about swimrun [Feel Better, Live More with Dr Rangan Chatterjee- Episode96]. The title of this episode is ‘How this sporting event could change your life with Michael Lemmel’ co-founder of swimrun. Worth a listen.</p>
+
+<p>Now this did spark my interest. Something that sounded quite exciting, adventurous, connects you with your surroundings and breaks up my runs! Great!</p>
+
+<p>I was not too sure about the idea of running with wet trainers though. I’ve always skipped around puddles when running.</p>
+
+<p>I have lived in Portsmouth for over 20 years. I have never done open-water swimming. I have been to the beach, I have been kitesurfing, but never open-water swimming. Why?!! I ask myself now.</p>
+
+<p>Then, I saw the post on the Portsmouth Triathletes newsletter about some unofficial group starting to meet for swimruns in Southsea, great! I contacted Vini, ordered my swimrun wetsuit [as it was half price] and did my first trial session that same week.</p>
+
+<p>I am hooked.</p>
+
+<p>Just when you are getting hot and tired of running, you jump into the sea to cool off and rest your legs whilst you swim. What’s not to love?</p>
+
+<p>In addition, everyone is really welcoming and wanting to share the love of the sport with others, no matter their level.</p>
+
+<p>Think parkrun, but to a whole new, exciting level.</p>
+
+<h3><strong>So, now to my actual event.</strong></h3>
+
+<p>Long Eaton Swimrun<br>Spring Lakes<br>As Keen As Mustard<br>21km solo entry.</p>
+
+<p>Total Run 17.2km + Total Swim 3.8km</p>
+
+<p>It was colder than what I had been used to, with the temperature dropping just the week before .</p>
+
+<p>I had been excited all week, but was very grateful that my Southsea buddies Vini, Sarah and Rupert had also managed to make the event, so I was in the company of experienced athletes who knew what they were doing.</p>
+
+<p>The event was COVID secure and I must say I had no concerns with regards to this throughout the event. I feel much more of a risk doing the kid’s school pick-up each day at the moment.</p>
+
+<ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/revised_10k_long_eatonforkatie-960w.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/img_3992.jpeg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li></ul>
+
+<p>The first plunge into the water felt a bit cold, but I soon warmed up after that and didn’t really notice the cold water. I did notice not completely feeling my feet on some parts of the run though! This was my first open-fresh water swim and though I would describe myself as an above average swimmer, I did find it hard to get into my usual training swim rhythm. Swimming along Southsea beach is a bit easier to know where you are going and trying to keep in a straight line, but in the event I found I was having to sight every few strokes or I would end up going off course. I was also breathing every 2x strokes, instead of every 4x strokes which I normally do in my training sessions and leaking goggles all contributed to slowing me down a bit. Not to mention that I was also quite tired!</p>
+
+<p>There was also a swim section that we ended up getting tangled in river weeds/grass, which I guess is part of the experience, but maybe a bit more ‘connecting with the environment’ than I had in mind.</p>
+
+<img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/img_4016-e1601547133792.jpeg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;">
+
+<p>I started the race just behind Sarah &amp; Vini and Rupert, as it gave me someone to try and aim to keep up with. It also meant I would hopefully not make the mistake of starting too quickly and not making it to the finish line.</p>
+
+<p>It was really nice that we have a similar pace and I managed to keep up throughout most of the race, with Sarah &amp; Vini doing better in the swims and me and Rupert then trying to catch-up in the runs.</p>
+
+<img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/d463d66f-3720-49e4-9cc9-14fe73d26e64-1-e1601547110867.jpeg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;">
+
+<p>I have to thank Sarah &amp; Vini who twice saved me from going the wrong way on the runs, great teamwork! Team camaraderie prevailed over competitiveness, they could have left me to go on and get lost [maybe they would have, if I had been competing in the mixed team event ????].</p>
+
+<img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/0ea246a3-1f8f-4977-abd0-4eaa00f1b702-e1601547017857.jpeg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;">
+
+<p>This was a great first event for me, as it was 2x laps of a course, so it was all more familiar second time around and the longest run was 3.6km which is good for me.</p>
+
+<p>All in all, it was a great day, great race and I came 2nd in the male solo. And yes, there were more than two male competitors! Result!</p>
+
+<p>Definitely looking forward to doing more swimrun events alongside our growing number of Southsea Swimrunners.</p>
+
+<p><strong>I am not a runner.</strong></p>
+
+<p><strong>I am a swimrunner.</strong></p>
+
+<p><strong>I am a Söuthsea Swimrun(ner).</strong></p>
+
+<p>Adrian Federico</p>
 <div class="post-nav">
-  <a href="../blog.html" class="back">← All race reports</a>
+  <a href="../blog.html" class="back">← All posts</a>
   <a href="../index.html">Back to site →</a>
 </div>
 </article>

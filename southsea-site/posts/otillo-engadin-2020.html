@@ -6,7 +6,6 @@
 <title>Ötillö Engadin Swimrun 2020 — Söuthsea Swimrun</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-
 <style>
 :root{--black:#080808;--white:#ffffff;--accent:#00D44A;--accent-light:#00eb52;--accent-pale:#e6fff0;--sand:#f0f0f0;--sand-dark:#d0d0d0;--text-muted:#555555;--radius:4px;--font-display:'Bebas Neue',sans-serif;--font-body:'DM Sans',sans-serif;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -19,27 +18,31 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .nav-links a{font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,242,235,0.7);text-decoration:none;transition:color 0.2s;}
 .nav-links a:hover{color:var(--white);}
 .nav-cta{background:var(--accent)!important;color:var(--white)!important;padding:0.4rem 1rem;border-radius:var(--radius);}
-.hero{min-height:55vh;background:var(--black);display:flex;flex-direction:column;justify-content:flex-end;padding:0 2.5rem 3.5rem;position:relative;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0.3;}
+.hero{min-height:50vh;background:var(--black);display:flex;flex-direction:column;justify-content:flex-end;padding:0 2.5rem 3.5rem;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0.35;}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,1) 0%,rgba(8,8,8,0.5) 50%,rgba(8,8,8,0.15) 100%);}
 .hero-inner{position:relative;max-width:860px;}
 .hero-tag{display:inline-block;font-size:0.65rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:0.2rem 0.7rem;border-radius:var(--radius);margin-bottom:1rem;}
 .hero-title{font-family:var(--font-display);font-size:clamp(2.5rem,6vw,4.5rem);color:var(--white);line-height:1;letter-spacing:0.02em;margin-bottom:0.75rem;}
 .hero-year{font-size:0.8rem;color:rgba(255,255,255,0.35);font-weight:300;letter-spacing:0.1em;}
-.hero-nobg{background:#111;}
-article{max-width:720px;margin:0 auto;padding:4rem 2rem 6rem;}
+article{max-width:760px;margin:0 auto;padding:4rem 2rem 6rem;}
 article p{color:#333;font-size:1rem;line-height:1.85;margin-bottom:1.4rem;font-weight:300;}
-article h2{font-family:var(--font-display);font-size:1.8rem;letter-spacing:0.02em;margin:2.5rem 0 1rem;color:var(--black);}
-article h3,article h4{font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.02em;margin:2rem 0 0.75rem;color:var(--black);}
+article h2,article h3,article h4{font-family:var(--font-display);letter-spacing:0.02em;margin:2.5rem 0 1rem;color:var(--black);}
+article h2{font-size:2rem;}
+article h3{font-size:1.6rem;}
+article h4{font-size:1.3rem;}
 article img{width:100%;height:auto;border-radius:2px;margin:1.5rem 0;display:block;}
 article ul,article ol{padding-left:1.5rem;margin-bottom:1.4rem;}
 article li{color:#333;font-size:1rem;line-height:1.8;font-weight:300;margin-bottom:0.3rem;}
 article a{color:var(--accent);text-decoration:underline;text-underline-offset:3px;}
 article a:hover{color:var(--accent-light);}
-article em{font-style:italic;color:var(--text-muted);}
+article em{font-style:italic;}
 article strong{font-weight:500;}
+article blockquote{border-left:3px solid var(--accent);padding:0.5rem 1.5rem;margin:1.5rem 0;color:var(--text-muted);font-style:italic;}
+.img-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:0.75rem;margin:1.5rem 0;}
+.img-gallery img{margin:0;}
 .post-nav{border-top:1px solid var(--sand-dark);margin-top:3rem;padding-top:2rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
-.post-nav a{font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--black);text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;border-bottom:1px solid var(--black);padding-bottom:2px;transition:color 0.2s,border-color 0.2s;}
+.post-nav a{font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--black);text-decoration:none;border-bottom:1px solid var(--black);padding-bottom:2px;transition:color 0.2s;}
 .post-nav a:hover{color:var(--accent);border-color:var(--accent);}
 .post-nav a.back{color:var(--text-muted);border-color:var(--sand-dark);}
 footer{background:var(--black);padding:2rem 2.5rem;border-top:1px solid rgba(255,255,255,0.07);}
@@ -51,7 +54,6 @@ footer{background:var(--black);padding:2rem 2.5rem;border-top:1px solid rgba(255
 .footer-links a.green{color:var(--accent);}
 @media(max-width:768px){nav{padding:1rem 1.5rem;}.hero{padding:0 1.5rem 2.5rem;}article{padding:3rem 1.5rem 5rem;}footer{padding:1.5rem;}.nav-links li:not(:last-child){display:none;}}
 </style>
-
 </head>
 <body>
 <nav>
@@ -61,24 +63,83 @@ footer{background:var(--black);padding:2rem 2.5rem;border-top:1px solid rgba(255
     <li><a href="https://heylo.com/invite/5VCbcSYC" target="_blank" class="nav-cta">Join Us</a></li>
   </ul>
 </nav>
-<div class="hero" style="background-image: none;">
-  
+<div class="hero">
   <div class="hero-bg" style="background-image:url('https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/sosblog-engadin.jpg');"></div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <span class="hero-tag">Race Report · Ötillö</span>
+    <span class="hero-tag">Race Report · 2020</span>
     <h1 class="hero-title">Ötillö Engadin Swimrun 2020</h1>
-    <span class="hero-year">2020 · Söuthsea Swimrun</span>
+    <span class="hero-year">Söuthsea Swimrun</span>
   </div>
 </div>
 <article>
-<p>The new Covid-compliant format involved a video race briefing, masks and gloves at registration, and social distancing throughout the race area. Strange, but it worked — and the fact that the race happened at all felt like a minor miracle.</p>
-<p>The Engadin valley in the Swiss Alps is simply one of the most beautiful places on earth. The course takes in high-altitude lakes around St. Moritz, with swims in water so clear you can see the bottom from 10 metres. The running is on alpine trails that make you stop and stare even when you are supposed to be racing.</p>
-<p>Racing in 2020 felt precious. After months of cancelled events and uncertainty, being in the water and on the trails with other swimrunners from across Europe was a reminder of everything the sport represents — adventure, community, and the willingness to go a bit wild in extraordinary landscapes.</p>
-<p>The Engadin event remains one of the most beautiful swimrun courses in the world. The mountains see to that.</p>
-<p><em>By Sarah King.</em></p>
+<img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/116666643_10158406693181578_1174087202650820059_o.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;">
+
+<p class="has-text-align-left">The new Covid-compliant format involved a video race briefing, masks and gloves at registration, social distancing in the race area, and face coverings in the competitors’ box before the off. The morning had started off a bit chill and I’d worried I didn’t have enough warm kit, but by the time we were gathered waiting for the countdown the sun was out, the clouds had burned off and I was pleased for my race buff, fashioned into a face covering, to hide my delicate ginger flesh from the sun.</p>
+
+<p class="has-text-align-justify">I was supposed to go to Croatia to race the&nbsp;<a href="https://otilloswimrun.com/race_category/hvar/" target="_blank" rel="noreferrer noopener">Ötillö&nbsp;Hvar</a>&nbsp;swimrun in April with some other lovely Portsmouth Triathletes, but sadly Covid-19 got in the way and it was cancelled at the last minute. Not really knowing how things would pan out with the virus, a few of us moved our flights to Switzerland instead, for&nbsp;<a href="https://otilloswimrun.com/race_category/engadin/" target="_blank" rel="noreferrer noopener">Ötillö&nbsp;Engadin</a>&nbsp;at the start of July, hoping things would be more normal by then and we’d be back to travelling and doing fun things. Yeah, in hindsight, that was a little naïve.</p>
+
+<p class="has-text-align-justify">And so followed three months of uncertainty that went a little something like this: the race was moved to the end of July, we moved our flights for free, all good; Switzerland opened up to visitors from the UK, great news; the UK announced potential air bridges, so no quarantine on our return, excellent; Switzerland imposed new quarantine rules, not on the UK, but on Sweden (Ötillö is run by Swedes), bugger; Ötillö announced they would go early, quarantine for 10 days, and still host the race, awesome.</p>
+
+<p class="has-text-align-justify">Finally a race that was on, that we could go to, and we got to leave Portsea Island, for glorious Switzerland. I was very excited! Easy jet cancelled our flights.</p>
+
+<p class="has-text-align-justify">We booked new flights. The third member of the party dropped out. With costs becoming a little ridiculous we took the sensible decision to cancel.</p>
+
+<p class="has-text-align-justify">Two days and many Instagram posts of how lovely Engadin looked from the swimrun community later, we changed our minds.</p>
+
+<p class="has-text-align-justify">With a new mantra of “Never give up” we figured that if Ötillö could put on a race in these uncertain times, we could support our swimrun community and bloody race it (with sensible precautions, obviously).</p>
+
+<p class="has-text-align-justify">And so Vini and I, as the Southsea Swimrunners, finally found ourselves in Silvaplana in the Engadin valley in Switzerland on the weekend of 25–26 July ready to race the Ötillö Engadin Sprint course. Don’t ask about the decision-making process between doing the World Series event as a mixed team (45 km) and the Solo Sprint (15 km), it was a long, drawn out, and frankly absurd discussion, as we later discovered when we eventually arrived 6000 feet above sea level in Switzerland, having trained in Southsea (zero metres above sea level).</p>
+
+<ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/116433182_10158400489066578_7579569522157444771_n.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/116682852_10158407058416578_7899327391878933302_o.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/116243526_10158397088366578_2638732942327839254_n.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/116393102_10158400505746578_6249801820278771203_n.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li></ul>
+
+<p>Having finally decided to do the sprint course, we were both keen to give it some and see what months of running and swimming in the UK lockdown had done to our fitness. We would be tested over 15 km (13 km running; 2 km swimming), split into five runs and four swims.</p>
+
+<p>Run 1 (600 metres): It very quickly became evident that training at sea level for a race at altitude was not optimal. I was breathing like a particularly unfit person attempting a world record breaking park run. I dialled down my expectations, no sprinting for me, possibly just survival. We ran through the neighbouring campsite toward a grassy entry to the lake usually used by local windsurfers.</p>
+
+<p>Swim 1 (400 metres): I didn’t clear my goggles, so hadn’t a clue where I was going and overshot the exit a teeny bit, and my breathing still felt funny. Vini was at this point finding out his swim training had gone very well, as he popped out of the water with the leading men’s team, who also happened to be our mate Alex (who we’d met at the&nbsp;<a href="https://sarahjaneking.wordpress.com/2019/09/25/otillo-final-15-km-uto-sweden/">Ötillö&nbsp;Final 15 km</a>&nbsp;in Sweden last August) and his pal Gerardo.</p>
+
+<p>Run 2 (1200 metres): It was a nice flat run alongside the lake and I still couldn’t breathe. I tried to very slowly run down another solo lady ahead, to make myself feel more competitive.&nbsp;</p>
+
+<ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/116431600_10158400505761578_2008022198782399006_n.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/116433465_10158400505641578_4014898575891822034_n.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li></ul>
+
+<p>Swim 2 (600 metres): It was really lovely, not too cold, and the water looked and tasted fresh and clean. I think I was swimming pretty well. I’ve been trying to sight less so as not to disrupt my stroke too much and as I could see people quite wide on both sides of me I took it as a sign I was basically on the right course.</p>
+
+<p>Run 3 (500 metres): We were now on woodland trail on the other side of the lake. It was cooler and I passed a couple of teams.</p>
+
+<p>Swim 3 (400 metres): There was a bloke faffing at the entry and it was impossible to get past him. Having finally got in, I realised I was actually enjoying myself. The breathing thing wouldn’t be getting any better, so I just had to appreciate my surroundings and do the best I could.</p>
+
+<p>Run 4 (5600 + 2900 metres): There was an aid station just out of the swim exit. Normally we’d fill our own cups, but Covid meant paper cups supplied and filled by Ötillö only. I had some water and ran on.</p>
+
+<p>This was the big run, basically about 1200 feet of elevation until the aid station after 5600 metres. It was a pleasant woodland trail. I removed my swim hat/earplugs and stowed my paddles and pullbouy; others kept theirs on, but I didn’t want to overheat as well as not be able to breathe. The air seemed slightly better in the forest, even while climbing. I ran when I could and yomped when I couldn’t. I passed a couple of solo ladies. I was passed in turn by a mixed team, she was lively, running backwards and forwards across the path so he could keep up with her.</p>
+
+<p>God it was hard. Thank f*@k we didn’t sign up for the World Series.</p>
+
+<p>I spied Vini ahead and tried to sneak up on him. He eventually spotted me just before the aid station and left quickly as I arrived. He then lost me on a small technical section downhill.</p>
+
+<p>After that it was better terrain and I tried to speed down the hill (as our chairman says, “Brains off, brakes off”), and passed another couple of solo men.</p>
+
+<p>I was passed in turn by a Swiss woman who was powering down the hill. She was awesome, passing all the blokes ahead, like she was racing on the flat.</p>
+
+<p>Swim 4 (800 metres): I trapped my hat in my goggles and had to stop three times to sort them out. I cursed my idiocy, worrying that all those people I’d just passed would catch me up.</p>
+
+<ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/116353681_10158400505471578_5288477344312619092_n.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li></ul>
+
+<p>Run 5 (2200 metres): I emerged from the swim just behind speedy Swiss lady, and was momentarily intent on chasing her down. However, I quickly realised I couldn’t stand up straight and was very wobbly. Uphill then downhill for five miles, breathing mega hard, followed by 800 metres of being horizontal, had done all sorts of weird to me. I very gradually got my head straight and saw the lady maybe 400 metres ahead. But again the air was gone, and I felt slightly sick. I decided to concentrate on putting one foot in front of the other and getting to the end, rather than racing her.</p>
+
+<p>I let three solo blokes pass me in the final 50 metres. Ah well.</p>
+
+<ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/50151849466_2947d27a5d_o.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/50151303038_750f038a02_o.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li></ul>
+
+<p>I finished as seventh solo lady. I fist bumped the race director, Michael, who in non-Covid time would usually give you a hug, and collected my own medal from the table (another Covid precaution).</p>
+
+<p>Vini put three minutes back into me after he ran off at the aid station and was rightly chuffed with his swimming progress. Alex and Gerardo won the men’s sprint and our new swimrun friend John completed his first swimrun and his partner, Sarah, recorded her first Swimrun Radio podcast. We were all very happy swimrunners.</p>
+
+<p>Ötillö were absolutely heroic at hosting the event given all that was against them and I’m really pleased we braved what currently stands for normal and ventured out to Switzerland. Who knows when we will race internationally again given the ever-changing Covid situation. But I hope it’s soon.</p>
+
+<p><em>Sarah King</em></p>
 <div class="post-nav">
-  <a href="../blog.html" class="back">← All race reports</a>
+  <a href="../blog.html" class="back">← All posts</a>
   <a href="../index.html">Back to site →</a>
 </div>
 </article>

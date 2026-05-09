@@ -6,7 +6,6 @@
 <title>Öloppet Swimrun, Gothenburg 2018 — Söuthsea Swimrun</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-
 <style>
 :root{--black:#080808;--white:#ffffff;--accent:#00D44A;--accent-light:#00eb52;--accent-pale:#e6fff0;--sand:#f0f0f0;--sand-dark:#d0d0d0;--text-muted:#555555;--radius:4px;--font-display:'Bebas Neue',sans-serif;--font-body:'DM Sans',sans-serif;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -19,27 +18,31 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .nav-links a{font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,242,235,0.7);text-decoration:none;transition:color 0.2s;}
 .nav-links a:hover{color:var(--white);}
 .nav-cta{background:var(--accent)!important;color:var(--white)!important;padding:0.4rem 1rem;border-radius:var(--radius);}
-.hero{min-height:55vh;background:var(--black);display:flex;flex-direction:column;justify-content:flex-end;padding:0 2.5rem 3.5rem;position:relative;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0.3;}
+.hero{min-height:50vh;background:var(--black);display:flex;flex-direction:column;justify-content:flex-end;padding:0 2.5rem 3.5rem;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0.35;}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,1) 0%,rgba(8,8,8,0.5) 50%,rgba(8,8,8,0.15) 100%);}
 .hero-inner{position:relative;max-width:860px;}
 .hero-tag{display:inline-block;font-size:0.65rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:0.2rem 0.7rem;border-radius:var(--radius);margin-bottom:1rem;}
 .hero-title{font-family:var(--font-display);font-size:clamp(2.5rem,6vw,4.5rem);color:var(--white);line-height:1;letter-spacing:0.02em;margin-bottom:0.75rem;}
 .hero-year{font-size:0.8rem;color:rgba(255,255,255,0.35);font-weight:300;letter-spacing:0.1em;}
-.hero-nobg{background:#111;}
-article{max-width:720px;margin:0 auto;padding:4rem 2rem 6rem;}
+article{max-width:760px;margin:0 auto;padding:4rem 2rem 6rem;}
 article p{color:#333;font-size:1rem;line-height:1.85;margin-bottom:1.4rem;font-weight:300;}
-article h2{font-family:var(--font-display);font-size:1.8rem;letter-spacing:0.02em;margin:2.5rem 0 1rem;color:var(--black);}
-article h3,article h4{font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.02em;margin:2rem 0 0.75rem;color:var(--black);}
+article h2,article h3,article h4{font-family:var(--font-display);letter-spacing:0.02em;margin:2.5rem 0 1rem;color:var(--black);}
+article h2{font-size:2rem;}
+article h3{font-size:1.6rem;}
+article h4{font-size:1.3rem;}
 article img{width:100%;height:auto;border-radius:2px;margin:1.5rem 0;display:block;}
 article ul,article ol{padding-left:1.5rem;margin-bottom:1.4rem;}
 article li{color:#333;font-size:1rem;line-height:1.8;font-weight:300;margin-bottom:0.3rem;}
 article a{color:var(--accent);text-decoration:underline;text-underline-offset:3px;}
 article a:hover{color:var(--accent-light);}
-article em{font-style:italic;color:var(--text-muted);}
+article em{font-style:italic;}
 article strong{font-weight:500;}
+article blockquote{border-left:3px solid var(--accent);padding:0.5rem 1.5rem;margin:1.5rem 0;color:var(--text-muted);font-style:italic;}
+.img-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:0.75rem;margin:1.5rem 0;}
+.img-gallery img{margin:0;}
 .post-nav{border-top:1px solid var(--sand-dark);margin-top:3rem;padding-top:2rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
-.post-nav a{font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--black);text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;border-bottom:1px solid var(--black);padding-bottom:2px;transition:color 0.2s,border-color 0.2s;}
+.post-nav a{font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--black);text-decoration:none;border-bottom:1px solid var(--black);padding-bottom:2px;transition:color 0.2s;}
 .post-nav a:hover{color:var(--accent);border-color:var(--accent);}
 .post-nav a.back{color:var(--text-muted);border-color:var(--sand-dark);}
 footer{background:var(--black);padding:2rem 2.5rem;border-top:1px solid rgba(255,255,255,0.07);}
@@ -51,7 +54,6 @@ footer{background:var(--black);padding:2rem 2.5rem;border-top:1px solid rgba(255
 .footer-links a.green{color:var(--accent);}
 @media(max-width:768px){nav{padding:1rem 1.5rem;}.hero{padding:0 1.5rem 2.5rem;}article{padding:3rem 1.5rem 5rem;}footer{padding:1.5rem;}.nav-links li:not(:last-child){display:none;}}
 </style>
-
 </head>
 <body>
 <nav>
@@ -61,24 +63,39 @@ footer{background:var(--black);padding:2rem 2.5rem;border-top:1px solid rgba(255
     <li><a href="https://heylo.com/invite/5VCbcSYC" target="_blank" class="nav-cta">Join Us</a></li>
   </ul>
 </nav>
-<div class="hero" style="background-image: none;">
-  
+<div class="hero">
   <div class="hero-bg" style="background-image:url('https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/sosblog-ollopet.jpg');"></div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <span class="hero-tag">Race Report · Sweden</span>
+    <span class="hero-tag">Race Report · 2018</span>
     <h1 class="hero-title">Öloppet Swimrun, Gothenburg 2018</h1>
-    <span class="hero-year">2018 · Söuthsea Swimrun</span>
+    <span class="hero-year">Söuthsea Swimrun</span>
   </div>
 </div>
 <article>
-<p>Wet and dry, up and down, on and off — such are the various states of the swimrunner, their wetsuit zip and their hat and goggles. Racing in Sweden felt like coming home for a sport that was born here, on these very kinds of lakes and forest trails.</p>
-<p>The <a href="https://oloppet.se" target="_blank">Öloppet</a> event in Gothenburg is one of the classic Swedish swimrun races — part of the scene that grew up around the original Ötillö format and helped spread the sport across Scandinavia before it reached the rest of the world.</p>
-<p>Racing in Gothenburg means forests, lakes, and a relaxed Swedish race culture where the emphasis is on participation, nature, and a good time rather than podium pressure. The course winds through the landscape around the city, with swim sections in clear Swedish lakes that give a taste of what made the Stockholm archipelago the birthplace of this extraordinary sport.</p>
-<p>If you have not raced in Sweden, put it on your list. The swimrun scene here is genuine, welcoming, and set in some of the most beautiful natural environments you will ever race through.</p>
-<p><em>By Sarah King.</em></p>
+<img src="https://gallery.mailchimp.com/367bbe897a6820804d9315f6d/images/b87b74a2-1f0e-46a7-b519-f1f357aceca5.jpeg" alt=""/>
+
+<p class="has-text-align-justify">Wet and dry, up and down, on and off – such are the various states of the swimrunner, their wetsuit zip and their hat and goggles during the competition, and, after Sarah King’s epic Breca Gower marathon in July, we were up in Gothenburg for a shorter but equally scenic version of this race format, in its country of origin.</p>
+
+<p class="has-text-align-justify">We had taken part in the 3rd iteration of the Öloppet (literally “island-run-the”) in 2014 and, due to suddenly-imposed work commitments, battled our way around in a state of high stress as we had to get a specific ferry back from the southern archipelago, where the race takes place, to the mainland, to get the last flight home and to work at 0600 the next morning. A highly frustrating affair, so we resolved to plan things better with immutable days off this time around and enjoy our experience for their edition number 7.</p>
+
+<p class="has-text-align-justify">The course had changed but the distances remained the same. We opted for the Sprint version again (approx 22kms of running and 2600m of swimming) and arrived nice and early at the race village on the island of Styrsö. We watched Sarah King’s full-distance nutter buddies (35km run / 5km swim) take off across the first sea crossing to the next island like scalded cats (fish?) and made our way to the start line to prepare for our “lite” version.</p>
+
+<div><img src="https://gallery.mailchimp.com/367bbe897a6820804d9315f6d/images/0c471f17-c821-47aa-ae9f-d0e6eeb9e9e2.jpeg" alt="" width="507" height="869"/></div>
+
+<p class="has-text-align-justify">Heeding the announcer’s “self-seeding” suggestion, we duly positioned ourselves at the very back and I made especially sure that we weren’t going to threaten any positions by stopping and restarting my watch at the timing mat (stop-&gt;’discard activity’-&gt;’are you sure? Yes/No’-&gt;yes-&gt;start) when I realised there was one! We entered and exited the first 650m swim as the last couple, but soon caught up a pair of larger ladies to move up one whole place, thereby already equalling 2014’s finishing position.</p>
+
+<p class="has-text-align-justify">There then followed a series of runs and swims, of longer and shorter distances, until the finish line. The End. As that’s not much of a report, here are the highlights:</p>
+
+<p class="has-text-align-justify">– Well-marked routes, with red and white striped tape hanging off trees and attached to rocks throughout…apart from the ones we missed and had to double-back, in the process getting ahead of another pair!<br>– Beautiful island scenery, including one normally off-limits to the public, where we were met by two unsmiling Swedish Military Police officers with guns<br>– Only slightly salty, 21C sea water, roughed up by the strong wind, but not a patch on a Southsea Special day, with no current, no jellyfish and pleasure boats being chased off by the numerous water patrol craft guarding our crossing routes<br>– Some great rock scrambling over smooth boulders, nothing too strenuous for a boyhood spent in West Wales, but a fun challenge nonetheless<br>– Muddy wading through the shallower parts, including a 500m “swim” between the island on which we based ourselves for our holiday (Asperö) and Brännö, where I walked for 490m of it<br>– Alexandra’s much-improved swimming, which took over 30 minutes off our previous time<br>– Me thinking I’d injured my calf muscle by pulling something, only to discover at the end that the pain and swelling was caused by some sort of sting through my calf guard – bee, wasp, Japanese hornet, scorpion?<br>– The joy of passing a pair struggling out of their wetsuits at 1km into the last 6km run when we had done our research, knew when the last swim was and had peeled off accordingly to allow a faster finish<br>– Me continuously calling out “I want that one” like Little Britain’s Andy as we watched all the fantastic houses pass by, busily planning our retirement to the islands two decades hence.</p>
+
+<img src="https://gallery.mailchimp.com/367bbe897a6820804d9315f6d/images/7f913eca-42b7-4b21-aed3-0eb690fb853a.jpeg" alt=""/>
+
+<p class="has-text-align-justify">All in all, a great event, well run, safe, with lunch (even for a couple of veggies like us) and elderflower cordial to finish and a fantastic way to see a beautiful part of Sweden, doing a swim run in the company of its inventors. Our 04h23m was enough to beat two men’s pairs, two ladies’ pairs and one mixed pair; if you fancy trying it, don’t be fazed by the sea of semi-professional, tanned, muscular, Viking-bearded (even the women!) athletes who assembled at the race village – two pasty-skinned amateurs from Portsmouth “reprezented” and had a wonderful time!</p>
+
+<p>Rupert Rhodes</p>
 <div class="post-nav">
-  <a href="../blog.html" class="back">← All race reports</a>
+  <a href="../blog.html" class="back">← All posts</a>
   <a href="../index.html">Back to site →</a>
 </div>
 </article>

@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ötillö Final 15km, Utö, Sweden 2019 — Söuthsea Swimrun</title>
+<title>Ötillö Final 15 km, Utö, Sweden 2019 — Söuthsea Swimrun</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-
 <style>
 :root{--black:#080808;--white:#ffffff;--accent:#00D44A;--accent-light:#00eb52;--accent-pale:#e6fff0;--sand:#f0f0f0;--sand-dark:#d0d0d0;--text-muted:#555555;--radius:4px;--font-display:'Bebas Neue',sans-serif;--font-body:'DM Sans',sans-serif;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -19,27 +18,31 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .nav-links a{font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,242,235,0.7);text-decoration:none;transition:color 0.2s;}
 .nav-links a:hover{color:var(--white);}
 .nav-cta{background:var(--accent)!important;color:var(--white)!important;padding:0.4rem 1rem;border-radius:var(--radius);}
-.hero{min-height:55vh;background:var(--black);display:flex;flex-direction:column;justify-content:flex-end;padding:0 2.5rem 3.5rem;position:relative;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0.3;}
+.hero{min-height:50vh;background:var(--black);display:flex;flex-direction:column;justify-content:flex-end;padding:0 2.5rem 3.5rem;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0.35;}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,1) 0%,rgba(8,8,8,0.5) 50%,rgba(8,8,8,0.15) 100%);}
 .hero-inner{position:relative;max-width:860px;}
 .hero-tag{display:inline-block;font-size:0.65rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:0.2rem 0.7rem;border-radius:var(--radius);margin-bottom:1rem;}
 .hero-title{font-family:var(--font-display);font-size:clamp(2.5rem,6vw,4.5rem);color:var(--white);line-height:1;letter-spacing:0.02em;margin-bottom:0.75rem;}
 .hero-year{font-size:0.8rem;color:rgba(255,255,255,0.35);font-weight:300;letter-spacing:0.1em;}
-.hero-nobg{background:#111;}
-article{max-width:720px;margin:0 auto;padding:4rem 2rem 6rem;}
+article{max-width:760px;margin:0 auto;padding:4rem 2rem 6rem;}
 article p{color:#333;font-size:1rem;line-height:1.85;margin-bottom:1.4rem;font-weight:300;}
-article h2{font-family:var(--font-display);font-size:1.8rem;letter-spacing:0.02em;margin:2.5rem 0 1rem;color:var(--black);}
-article h3,article h4{font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.02em;margin:2rem 0 0.75rem;color:var(--black);}
+article h2,article h3,article h4{font-family:var(--font-display);letter-spacing:0.02em;margin:2.5rem 0 1rem;color:var(--black);}
+article h2{font-size:2rem;}
+article h3{font-size:1.6rem;}
+article h4{font-size:1.3rem;}
 article img{width:100%;height:auto;border-radius:2px;margin:1.5rem 0;display:block;}
 article ul,article ol{padding-left:1.5rem;margin-bottom:1.4rem;}
 article li{color:#333;font-size:1rem;line-height:1.8;font-weight:300;margin-bottom:0.3rem;}
 article a{color:var(--accent);text-decoration:underline;text-underline-offset:3px;}
 article a:hover{color:var(--accent-light);}
-article em{font-style:italic;color:var(--text-muted);}
+article em{font-style:italic;}
 article strong{font-weight:500;}
+article blockquote{border-left:3px solid var(--accent);padding:0.5rem 1.5rem;margin:1.5rem 0;color:var(--text-muted);font-style:italic;}
+.img-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:0.75rem;margin:1.5rem 0;}
+.img-gallery img{margin:0;}
 .post-nav{border-top:1px solid var(--sand-dark);margin-top:3rem;padding-top:2rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
-.post-nav a{font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--black);text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;border-bottom:1px solid var(--black);padding-bottom:2px;transition:color 0.2s,border-color 0.2s;}
+.post-nav a{font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--black);text-decoration:none;border-bottom:1px solid var(--black);padding-bottom:2px;transition:color 0.2s;}
 .post-nav a:hover{color:var(--accent);border-color:var(--accent);}
 .post-nav a.back{color:var(--text-muted);border-color:var(--sand-dark);}
 footer{background:var(--black);padding:2rem 2.5rem;border-top:1px solid rgba(255,255,255,0.07);}
@@ -51,7 +54,6 @@ footer{background:var(--black);padding:2rem 2.5rem;border-top:1px solid rgba(255
 .footer-links a.green{color:var(--accent);}
 @media(max-width:768px){nav{padding:1rem 1.5rem;}.hero{padding:0 1.5rem 2.5rem;}article{padding:3rem 1.5rem 5rem;}footer{padding:1.5rem;}.nav-links li:not(:last-child){display:none;}}
 </style>
-
 </head>
 <body>
 <nav>
@@ -61,24 +63,81 @@ footer{background:var(--black);padding:2rem 2.5rem;border-top:1px solid rgba(255
     <li><a href="https://heylo.com/invite/5VCbcSYC" target="_blank" class="nav-cta">Join Us</a></li>
   </ul>
 </nav>
-<div class="hero" style="background-image: none;">
-  
+<div class="hero">
   <div class="hero-bg" style="background-image:url('https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/sosblog-sweden19.jpg');"></div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <span class="hero-tag">Race Report · Ötillö</span>
-    <h1 class="hero-title">Ötillö Final 15km, Utö, Sweden 2019</h1>
-    <span class="hero-year">2019 · Söuthsea Swimrun</span>
+    <span class="hero-tag">Race Report · 2019</span>
+    <h1 class="hero-title">Ötillö Final 15 km, Utö, Sweden 2019</h1>
+    <span class="hero-year">Söuthsea Swimrun</span>
   </div>
 </div>
 <article>
-<p>Racing the Ötillö Final on the island of Utö in the Stockholm archipelago felt like coming full circle. Utö is one of the islands where swimrun was invented in 2002, when a group of friends made a bet to race from island to island using nothing but their own bodies.</p>
-<p>The 15km course at Utö is the shorter of the Ötillö Final distances — a good entry point into the Ötillö world that still delivers everything the brand is known for: stunning island scenery, clear Baltic water, and a race atmosphere that feels genuinely special.</p>
-<p>Racing in the Stockholm archipelago is unlike anywhere else in swimrun. The islands are flat and forested, the water clear, and the October light has a quality that is difficult to describe. The whole experience feels slightly unreal.</p>
-<p>The Ötillö community is warm and international. At the Final start line you will find elite pairs chasing World Championship qualification alongside first-timers for whom this is their biggest adventure yet. That range is one of the things that makes Ötillö special.</p>
-<p><em>By Sarah King.</em></p>
+<p>Having pondered so long over whether I should join my tri club at our club backed event in Vichy this year that the only entries left were the absurdly expensive Nirvana ones (seriously, £350 for a 70.3!), I found myself scouring the internet in search of a fun alternative. It appeared in the form of another swimrun, and we know&nbsp;<a href="https://sarahjaneking.wordpress.com/2019/07/26/breca-gower-swimrun-2019/" target="_blank" rel="noreferrer noopener">how much I like those</a>.</p>
+
+<p>On the first weekend of September each year, the islands of the Stockholm archipelago host the “mother of all swimruns”, the&nbsp;<a href="https://otilloswimrun.com/races/otillo/" target="_blank" rel="noreferrer noopener">Ötillö World Championships</a>, a monstrous 75 km endurance event: 65 km of running and 10 km of swimming, covering 24 islands, with 46 transitions between swimming and running. But obviously I wasn’t doing that race, you need to qualify for the world champs, and you definitely need a swimrun buddy, and this time, or when I entered at least, I would be flying solo. No “Dancing Queens”, no “The King and the Princess”, just the solo King.</p>
+
+<p>Fortunately for me, a couple of days before their mega event, Ötillö also host a&nbsp;<a href="https://otilloswimrun.com/races/otillo-final-15k/" target="_blank" rel="noreferrer noopener">sprint race</a>, over the “emotional final 15 km” of the world championship course, and you can do it solo, which is unusual for swimrun. Added to that, the entry fee was about £60, which was right up my street. When else would I ever get the chance to race on the world championship course, at the true home of swimrun?</p>
+
+<p>Months of planning later and my summer holiday would see me hopping on the Eurostar to Paris, crossing Paris to catch the train to Vichy, supporting the tribe at the Vichy 70.3 and Ironman Vichy, boarding another train to Lyon, followed by another to Geneva, from where I would fly to Stockholm. And if that wasn’t enough fannying about, from Stockholm I would catch a commuter train, a bus and then a ferry to Utö, a gorgeous Swedish island that hosts the finish line of both races.</p>
+
+<p>I spent a couple of glorious days on the island, camping, walking and cycling. I was eaten alive by mosquitoes, I saw elk in the wild, a weird-looking caterpillar tried to get into my tent, and I sat completely alone on an absolutely stunning white sandy beach feeling slightly weirded out to be so alone, and yet equally invigorated that I was. It was brilliant.</p>
+
+<ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/dscf5410.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/dscf5428.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/dscf5438.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/dscf5458.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/dscf5487.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li></ul>
+
+<p>Race day arrived on the Saturday. It was sunny and warm. I packed up my campsite and trundled the 500 metres back into Gruvbryggan. I’d presumed more people would have arrived on Utö in the days prior to the race, but it turned out most were much braver than me and had risked the train/bus/ferry extravaganza on the morning of the race. Obviously they hadn’t spent the last five years commuting into London on the great British rail network and still had some faith in public transport.</p>
+
+<img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/otillo-final-15k-21.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;">
+
+<p>I hit up the local bakery for a totally inappropriate race-day breakfast, registered (as one of only two solo ladies entered in the event) and waited for the ferry to cough up just about everyone else taking part, including V, “the Princess” himself, who’d embraced his love of swimrun so much over the last couple of months he’d entered a random race in deepest, darkest (not deep or dark at all, in fact, light and very beautiful), Sweden. He’d befriended a group of solo male athletes on the ferry that included a winner from another Ötillö event and a professional water polo player. It looked like the men’s field would be a little more serious than the ladies (I hadn’t clocked eyes on my only competition yet).</p>
+
+<p>Two hundred and thirty racers kitted up outside the local store and prepared to board the ferry to the start. The traditional colours of the Swedish countryside, with red-brown wooden buildings nestled amidst the green of the island’s native forest on one side and the green-blue hues of the waters of the archipelago on the other, were a stark contrast to the horde of chattering athletes, decked out in colourful race bibs: blue for the solos, red for the men’s teams, orange for the ladies’ teams, and green for the mixed teams.</p>
+
+<ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/dscf5506.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/dscf5509.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li></ul>
+
+<p>The ferry ride lasted about 30 minutes. It was really hot with everyone huddled in for the race briefings, packed tightly together, all sweating nervous energy into their neoprene. I was pleased when we finally arrived at Ornö. It was only metres to the start from where the ferry dropped us off. We had about 15 minutes to prepare ourselves for the 15 km to come, which would see us running and swimming our way back to Utö. There would be ten runs and nine swims, a similar ratio to Breca Gower, but a very different race.</p>
+
+<img src="https://sarahjaneking.files.wordpress.com/2019/09/otillo-final-15k-14.jpg?w=1140" alt="Otillo Final 15k 14" class="wp-image-2173"/>
+
+<p>It started with a brief run and then a 1 km swim, to stretch the pack out a little. We had been instructed to swim out and then turn between two buoys and follow the coastline past another buoy to the land on the other side. It’s always a little fraught at the start, as everyone tries to remember what they are supposed to be doing in their transitions between running and swimming and finds their pace, but I soon had some open water to myself.</p>
+
+<ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/otillo-final-15k-13.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/otillo-final-15k-21-1.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li></ul>
+
+<p>That’s when I spotted the jellyfish. There were a lot of the buggers too. Not the massive beasties of Wales, but plenty of them. Everyone else seemed to be taking them in their stride, but I was missing the camaraderie of being in a team at this point. V was somewhere up ahead, apparently gazing at the jellies like he was at an aquarium, enjoying the view. I’d just have to deal with them on my own. Fortunately, I realised, they couldn’t be stingers, because they’d have been zapping me left, right and centre, and I hadn’t felt a thing. So, with an occasional glance up to sight for the exit flag, I just kept swimming through them.</p>
+
+<p>The next run was the “long run”, at about 5 km. I passed a fair few folk who’d obviously swum a bit better than me, and there were a few people already walking, which was surprising. The trail was pretty good and there weren’t any hills to speak of, nothing too taxing. I’d decided it wasn’t really far enough to drop my wetsuit, but with my long-sleeved tri suit on underneath and my water bottle having migrated out of reach to the small of my back, I was overheating.</p>
+
+<p>Thankfully, I soon arrived at an aid station, where some poor marshal lady gamely hoiked my bottle back out of my suit. Bless her. She also let us know that although the next swim didn’t look very far, the current was pulling significantly to the left. I thanked her and made sure I aimed for the right of the flag, just visible on the next island.</p>
+
+<p>Each solo athlete is partnered up with a pink tow float, a safety device for the swim sections, and I found myself faffing with it, a lot, before realising quite late in the game that I should just connect it up to a carabiner on my race belt, from where it would still serve its purpose without getting in the way. Lesson learned. By the time I finished, I’d taffled myself up in it so badly it was like an episode of Taskmaster getting it back off again.</p>
+
+<p>The race route was fun, we’d emerge on an island and follow the colourful ribbons in the trees through the woodland trails. You had to pay close attention because you couldn’t always see where the person in front of you was and couldn’t rely on them to have seen the ribbons and be heading in the right direction.</p>
+
+<img src="https://sarahjaneking.files.wordpress.com/2019/09/otillo-final-15k-11.jpg?w=1140" alt="Otillo Final 15k 11" class="wp-image-2170"/>
+
+<p>The shortest swim seemed to have the strongest current and I’d daftly not bothered to put my paddles on and just wafted them about in one hand instead, making some ungainly effort to claw my way through the water.</p>
+
+<p>The following section saw me swimming almost sideways to reach the flag. Two men had got into the same stretch of water much further to the left than me and I was a little concerned they’d over-cooked it and would be taken away by the current. I wondered how often the organisers needed to pick up errant swimmers and pop them back on the course.</p>
+
+<p>I knew the moment I landed back on Utö because I’d walked to the top of the island on the day I arrived and I recognised the path.</p>
+
+<img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/otillo-final-15k-17-1.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;">
+
+<p>From there it was still a meandering run through the woods, a swim over to a small island to chants of “heya, heya, heya” from the supporting Swedes, a swim over to the next, very slightly bigger, island, a run over that island, and a swim back onto Utö. I then ran through some more woodland before popping out near the outdoor adventure centre in Gruvbryggan.</p>
+
+<p>Then it was just a quick final slog up the only real hill on the course to the finish line at Utö Värdshus. I rounded the bend in the road to hear the compere say I had won my category. The ribbon was up across the line and I made a terrible mess of running through it, not quite figuring out whether I should run at it with mad abandon and tear it from the finish line, raising it above my head in triumph. Instead, I ran at it with very British restraint, tearing only one side of it off and then having to put it down gently while looking very slightly embarrassed. I did manage to give Michael Lemmel a massive grin when he hugged me and congratulated me for winning the solo ladies race though. “Was I the only one in it?”, I asked him. “Yes”, he said with a smile. He had a handful of medals and I asked him if I could have one. He said, no, I’d get mine at the presentation. Ah, of course!</p>
+
+<img src="https://sarahjaneking.files.wordpress.com/2019/09/otillofinal-15k.jpg?w=1140" alt="OtilloFinal 15k" class="wp-image-2162"/>
+
+<p>It turns out that if you win your category you get not only a massive medal, but also a free entry to another solo Ötillö race. So, my swimrun story isn’t over yet. And considering Ötillö hosts events in Croatia, the Scilly Isles, Germany, France, the US, and Switzerland, I plan to keep going with this awesome sport for a while yet.</p>
+
+<p>V also had a good race, even if his category was won by a former world champion, and, ahem, he got a much smaller medal than me. “The King and the Princess” will return at Ötillö Malta in November and I, for one, can’t wait!</p>
+
+<ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/otillo-final-15k-19.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/otillo-final-15k-20.jpeg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li></ul>
+
+<p><em>Sarah King</em></p>
 <div class="post-nav">
-  <a href="../blog.html" class="back">← All race reports</a>
+  <a href="../blog.html" class="back">← All posts</a>
   <a href="../index.html">Back to site →</a>
 </div>
 </article>

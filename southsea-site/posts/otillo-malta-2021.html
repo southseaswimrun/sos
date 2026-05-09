@@ -6,7 +6,6 @@
 <title>Ötillö Malta 2021 — Söuthsea Swimrun</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-
 <style>
 :root{--black:#080808;--white:#ffffff;--accent:#00D44A;--accent-light:#00eb52;--accent-pale:#e6fff0;--sand:#f0f0f0;--sand-dark:#d0d0d0;--text-muted:#555555;--radius:4px;--font-display:'Bebas Neue',sans-serif;--font-body:'DM Sans',sans-serif;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -19,27 +18,31 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .nav-links a{font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,242,235,0.7);text-decoration:none;transition:color 0.2s;}
 .nav-links a:hover{color:var(--white);}
 .nav-cta{background:var(--accent)!important;color:var(--white)!important;padding:0.4rem 1rem;border-radius:var(--radius);}
-.hero{min-height:55vh;background:var(--black);display:flex;flex-direction:column;justify-content:flex-end;padding:0 2.5rem 3.5rem;position:relative;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0.3;}
+.hero{min-height:50vh;background:var(--black);display:flex;flex-direction:column;justify-content:flex-end;padding:0 2.5rem 3.5rem;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0.35;}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,1) 0%,rgba(8,8,8,0.5) 50%,rgba(8,8,8,0.15) 100%);}
 .hero-inner{position:relative;max-width:860px;}
 .hero-tag{display:inline-block;font-size:0.65rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:0.2rem 0.7rem;border-radius:var(--radius);margin-bottom:1rem;}
 .hero-title{font-family:var(--font-display);font-size:clamp(2.5rem,6vw,4.5rem);color:var(--white);line-height:1;letter-spacing:0.02em;margin-bottom:0.75rem;}
 .hero-year{font-size:0.8rem;color:rgba(255,255,255,0.35);font-weight:300;letter-spacing:0.1em;}
-.hero-nobg{background:#111;}
-article{max-width:720px;margin:0 auto;padding:4rem 2rem 6rem;}
+article{max-width:760px;margin:0 auto;padding:4rem 2rem 6rem;}
 article p{color:#333;font-size:1rem;line-height:1.85;margin-bottom:1.4rem;font-weight:300;}
-article h2{font-family:var(--font-display);font-size:1.8rem;letter-spacing:0.02em;margin:2.5rem 0 1rem;color:var(--black);}
-article h3,article h4{font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.02em;margin:2rem 0 0.75rem;color:var(--black);}
+article h2,article h3,article h4{font-family:var(--font-display);letter-spacing:0.02em;margin:2.5rem 0 1rem;color:var(--black);}
+article h2{font-size:2rem;}
+article h3{font-size:1.6rem;}
+article h4{font-size:1.3rem;}
 article img{width:100%;height:auto;border-radius:2px;margin:1.5rem 0;display:block;}
 article ul,article ol{padding-left:1.5rem;margin-bottom:1.4rem;}
 article li{color:#333;font-size:1rem;line-height:1.8;font-weight:300;margin-bottom:0.3rem;}
 article a{color:var(--accent);text-decoration:underline;text-underline-offset:3px;}
 article a:hover{color:var(--accent-light);}
-article em{font-style:italic;color:var(--text-muted);}
+article em{font-style:italic;}
 article strong{font-weight:500;}
+article blockquote{border-left:3px solid var(--accent);padding:0.5rem 1.5rem;margin:1.5rem 0;color:var(--text-muted);font-style:italic;}
+.img-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:0.75rem;margin:1.5rem 0;}
+.img-gallery img{margin:0;}
 .post-nav{border-top:1px solid var(--sand-dark);margin-top:3rem;padding-top:2rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
-.post-nav a{font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--black);text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;border-bottom:1px solid var(--black);padding-bottom:2px;transition:color 0.2s,border-color 0.2s;}
+.post-nav a{font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--black);text-decoration:none;border-bottom:1px solid var(--black);padding-bottom:2px;transition:color 0.2s;}
 .post-nav a:hover{color:var(--accent);border-color:var(--accent);}
 .post-nav a.back{color:var(--text-muted);border-color:var(--sand-dark);}
 footer{background:var(--black);padding:2rem 2.5rem;border-top:1px solid rgba(255,255,255,0.07);}
@@ -51,7 +54,6 @@ footer{background:var(--black);padding:2rem 2.5rem;border-top:1px solid rgba(255
 .footer-links a.green{color:var(--accent);}
 @media(max-width:768px){nav{padding:1rem 1.5rem;}.hero{padding:0 1.5rem 2.5rem;}article{padding:3rem 1.5rem 5rem;}footer{padding:1.5rem;}.nav-links li:not(:last-child){display:none;}}
 </style>
-
 </head>
 <body>
 <nav>
@@ -61,24 +63,71 @@ footer{background:var(--black);padding:2rem 2.5rem;border-top:1px solid rgba(255
     <li><a href="https://heylo.com/invite/5VCbcSYC" target="_blank" class="nav-cta">Join Us</a></li>
   </ul>
 </nav>
-<div class="hero" style="background-image: none;">
-  
+<div class="hero">
   <div class="hero-bg" style="background-image:url('https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/Otillo-Malta-2021-2_resized-scaled.jpg');"></div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <span class="hero-tag">Race Report · Ötillö</span>
+    <span class="hero-tag">Race Report · 2021</span>
     <h1 class="hero-title">Ötillö Malta 2021</h1>
-    <span class="hero-year">2021 · Söuthsea Swimrun</span>
+    <span class="hero-year">Söuthsea Swimrun</span>
   </div>
 </div>
 <article>
-<p>Having had a fairly successful swimrun season — second place at Breca Gower and third at the Breca National Champs in Jersey — heading to Malta for Ötillö felt like the right next step.</p>
-<p>Malta presents a very different challenge to UK and Scandinavian events. The swimming is warm and crystal clear, but the terrain is rocky and unforgiving. The course weaves around the islands of Malta and Gozo, with open-water channel swims that can get surprisingly choppy.</p>
-<p>Racing in the Mediterranean in October is a genuine privilege — warm enough not to worry about the cold, but challenging enough to remind you that swimrun at this level is never easy. The event organisation was smooth and the international field was strong and welcoming in equal measure.</p>
-<p>Malta confirmed what most swimrunners already know: the best events take you to places you would never otherwise see, moving through extraordinary landscapes under your own power in a way no other sport quite replicates.</p>
-<p><em>By Sarah King.</em></p>
+<p>Having had a fairly successful swimrun season (with a second place at Breca Gower and a third place at the Breca National Champs in Jersey, both competing as a solo lady and both over Breca’s sprint distance of 21 km), I found myself with a pretty easy decision as to whether I should sign up to race in <a rel="noreferrer noopener" href="https://otilloswimrun.com/race/otillo-swimrun-malta-world-series/" target="_blank">Malta with Ötillö</a> to round off the year. The only question was, should I sprint or should I attempt the world series race? V and I had been timed out five hours into the now notorious bad weather of world series race day in 2019, so I did have some unfinished business. But, V was now injured, so we wouldn’t be able to pair up. Luckily for me, Ötillö<strong> </strong>introduced a solo option in 2021, driven by Covid hindering people from competing in a sport that is traditionally raced in pairs. I probably wasn’t 100 percent fit enough for the world series distance, I certainly hadn’t trained specifically for it, but the sprint was only 12 km and that really wasn’t going to feed my swimrun fix. So, I entered the big one and prepared to have many sleepless nights before race day. </p>
+
+<p>Since 2019, Ötillö have updated the courses for both the sprint and world series distances in Malta. This year, both would start and finish on Golden Bay beach and, unusually, they would start with a swim. For the world series I would face 39 km of tough trail running and sea swimming, split into 31,550 km of running (13 runs) and 7,450 km of swimming (14 swims). </p>
+
+<p>I had a great Saturday supporting other members of Söuthsea Swimrun and other friends old and new as they raced around the headlands surrounding Golden Bay in the sprint race. It was blowing a gale on the clifftops but was still super warm in and out of the sea and they all had a fabulous time.</p>
+
+<ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/Otillo-Malta-2021-6.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/Otillo-Malta-2021-5.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/Otillo-Malta-2021-7-1.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li><li class="blocks-gallery-item"></li></ul>
+
+<p>But I was getting very nervous. Thankfully, some advice from John, a swimrun friend we’d met in Engadin in 2020, helped me tremendously. Whenever someone asked me how I was feeling, instead of saying terrified, he said I should say excited, the theory being excitement was slightly closer, emotionally speaking, to feeling scared than to the status quo, so I should be able to fool my brain into being excited.</p>
+
+<p>At 8 am on race day, let’s just say I was very “excited”. The solo men and the men’s teams set off at 8 am, followed by mixed teams, ladies teams and solo ladies at 8:15 am, to satisfy Malta’s Covid restrictions about gatherings.</p>
+
+<p>Unusually for swimrun, and this will sound a bit weird to the uninitiated, the race started with a swim. At the sound of the clapper, we launched ourselves into the surf on Golden Bay beach and swam around the headland to the left of the bay. The sea was a little choppy but we all seemed to be making good progress and I just tried to keep up without getting caught up in any of the teams’ tethers. After 700 metres of swimming we emerged onto the next beach and ran straight up a huge flight of stairs. At the top, we continued upwards, this time on fairly runnable trail, with the odd scramble, until we were up on the clifftop.</p>
+
+<p>My first challenge was to make sure I was inside cut-off number one. It was only 6.5 km into the course, but it would be on challenging terrain. We made our way back down to sea level for swim two, where I fanny-ed a bit with my goggles which kept filling with water, eventually I sorted them out and got moving. Hopping out at the other side of the bay, we followed a small trail by the water, until we were sent once again back up on to the clifftop. This time it was a long, steep scramble on loose ground to get up there, which immediately zapped your strength and made it a struggle to breathe. Once we finally emerged at the top, Ötillö obviously then sent us back downwards again to swim three.</p>
+
+<ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/Otillo-Malta-2021-14.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/Otillo-Malta-2021-13.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li></ul>
+
+<p>Swim three was pretty short and from the cliff looked nice and flat, but on entry you could feel a strong breeze right on top of the water that caught at your paddles, making it harder to slice into the water effectively. I ploughed on, eventually landing back on the beach with that massive flight of stairs. Up we all ran again.</p>
+
+<img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/Otillo-Malta-2021-9.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;">
+
+<p>From there it was a quick run around the headland to the aid station and cut-off point back at the Radisson Hotel. At this point I decided to cab down my wetsuit because I’m not good running in the heat and the next stage would be a 4.6km tramp across to the other side of the island. I was leading the solo ladies race at this point, but my glory days didn’t last long as on an unusually straight bit of trail another lady hurtled past me like I was stationary. She was wearing a long-sleeved suit and still had her swim hat on. I could only marvel at her pace and imagine how long I’d last if I was dressed like that in 24 degree heat. However, I did take a little pride in the fact I was the slightly stronger swimmer as I caught back up to her on the next couple of swims.</p>
+
+<p>At this point on the course I found some Swedes, a mixed pair and a women’s pair, and hung onto them for several transitions. We ran along the muddy bit from 2019, where I’d helped a woman who lost a shoe in the quagmire (one of several things that added up to us being timed out, according to V. Don’t ask him about the cream cheese sandwiches and hot tea, he’ll start to twitch and roll his eyes). This time, however, it was dry and made for some good trail running. I managed to stick with the pairs for a couple more swims, trying to hop on the mixed pair’s feet across one bay, but then losing them and indeed my way on the next. The exit flags were orange, the cliff was orange/yellow and the marshal was wearing a yellow tabard, they all blended into one. Thankfully a man on a jet ski motored over and directed me back onto the course.</p>
+
+<p>I ran on, receiving encouragement from some fellow Brits at the entry point for the next swim; they’d completed the sprint course the previous day and had offered their services as marshals, receiving an envy-inducing Ötillö sweatshirt for their troubles.</p>
+
+<p>I was now catching the tail-end men’s teams who’d started 15 minutes prior to my wave. I took advantage of having them as company on the first of the long swims, a 1 km slog along the coastline. There was a little bit of a current so I used my Solent swimming knowledge to swim shallow and avoid the worst of it. That did mean, however, I swam very close to some hardy fishermen, who thankfully didn’t look at all askance when I floated under their lines.</p>
+
+<p>There was only a brief run to the next swim entry, but it involved a warning of quicksand, which I obviously just ran straight through, suddenly losing my leg up to the knee. Amused by my own idiocy, I dragged myself out and headed for the longest swim section. I described this one in my notes after the event as 1.3 km of hell, so that should give you an idea of how hard it was. We headed into the waves back out of the bay and along the coastline once more. After setting out quite confidently I suddenly realised I hadn’t actually listened to any instructions. I looked up, hoping to see other swimmers in front, so I could determine exactly where I should be swimming. I could see the men’s team from the last swim to my right, so that was comforting, but the waves were hiding anyone else.</p>
+
+<p>We swam on. I breathed to the left, so I could keep an eye on the coastline, and at times I found I was alarmingly close to the rocks. Usually when sea swimming you find a rhythm with the waves, so that even if you’re swimming against a current you still feel like you’re progressing. But this time the sea was choppy in all directions. The men’s team and I eventually caught up to two more men’s teams, but I still couldn’t see where the hell we were supposed to be swimming to. Occasionally I would stop and spend a bit of time looking forwards until the waves broke in a way that allowed me to sight ahead. I was starting to feel seasick. I thought this might be my least favourite swim ever, and I’d had to be rescued once at a race because rounding a buoy in a strong current I’d got debilitating cramp and got taffled up in its rope and thought I might drown.</p>
+
+<p>Eventually we reached another orange exit flag, at which point we all converged on the same spot at the same time, as swimmers are prone to do when there’s the vastness of an ocean to swim in. We hauled ourselves out, congratulating each other on surviving our feat.</p>
+
+<p>After that there was some more running, and some more swimming, this time quite short swims. This section was less touristy, more local. We all took a longer rest at the third cut-off point, no doubt relieved that although we still had 11 km to go, we also now knew no one was going to time us out of the race. I felt quite elated, knowing that if I just kept moving the finish line was coming. I’d written all the distances on my arms in marker pen, as I feel better when I know where I am on the course and what’s coming next. But many of the men’s teams I now found myself with hadn’t done that and had no idea how much more they needed to do. They just knew they were already knackered. I now became their guru. However, telling them there were two 4 km run sections in what was left seemed to go down about as well as a cold cup of sick.</p>
+
+<p>Regardless, we scoffed some energy bars, drank some more water, and ventured on. The next few km of coastline were taken up by a campsite. Again, no one seemed to find it weird that pockets of swimrunners were invading their territory. The road along to the Gozo ferry wasn’t picturesque, but it was perfect for tired feet at this stage of a long race. Just past the ferry terminal they threw us back in the water. This 500 metre swim section was again choppy, but the water was such a dark shade of blue, so different from every other swim on the course, that it distracted me from any queasiness I was feeling from being back in the drink.</p>
+
+<p>The first of those two 4 km run sections eventually led us to the Popeye Village, a hangover from the Robbin Williams’ film of the 1980s, and one of Malta’s tourist spots. The final aid station was at this point and again I tried to rally a men’s team who were suffering in the heat. We bypassed the entrance tills and ran down through the village, past Popeye and Olive Oil, who pointed us towards our next swim entry. This swim is notorious in <a rel="noreferrer noopener" href="https://youtu.be/rx4jimocFl0?list=TLGGOTHufQ6yEQYxNDExMjAyMQ" target="_blank">video footage from 2019</a>. The sea was so wild that people were using their tethers to drag their team mates onto the exit stairs. Thankfully, it was a mild jaunt across in 2021.</p>
+
+<p>The final run section offered hellish terrain. I found some of it impossible to run on, I really didn’t fancy going arse over tit on jagged rocks and spikey shrubbery this close to the end. I was also now finally getting weirdly paranoid about the other solo ladies, where were they? There was obviously one ahead, but I couldn’t help but keep glancing back, looking for more yellow vests. Provided I could get to the final swim entry before them I thought I was pretty safe.</p>
+
+<p>Two of the men’s teams had run on ahead, getting a final wind now the end was finally in sight, and a mixed Maltese team, who I’d caught for a while, also forged ahead. Eventually I could see the hotel on the headland, I couldn’t be far away. I made sure to take my time getting over the rocks into the final swim so as not to come a cropper. I now had a mere 800 metres to swim around the rocky headland and back into Golden Bay. The sea here was so clear, with more wildlife than I’d seen anywhere else on the course. I swam through a shoal of small fish and passed one of the men’s teams. Back in the bay something bumped my face. I chose not to look for what it was and just kept swimming for the flags on the beach. I passed the other men’s team and entered the shallows. It was then only a short dash along the sand where I was announced as the second solo lady. For a moment I thought I was going to burst into tears, but the sight of the finish line photographer quickly put paid to that and I ran across the line ecstatic that it was finally done.</p>
+
+<ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/Otillo-Malta-2021-8.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/Otillo-Malta-2021-10-1.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li></ul>
+
+<img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/Otillo-Malta-2021-12-1.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;">
+
+<p>I finished Ötillö Malta in just under seven hours, the pro men took just over four, the top ladies teams just over five. It was one of the hardest races I’ve ever done, and I’m no stranger to endurance sport. Announcing the podium places, Michael, one of the founders of Ötillö, asked the crowd to imagine spending that long on a swimrun course with only yourself for company. But I really enjoyed it. I’m a fairly solitary person anyway, so spending a long time with my own thoughts is not unusual. But I also never felt like I was completely alone, there were always friendly racers around me on the course, thank god because the swim from hell would have been even worse without them. I definitely think racing as a pair is an experience that can’t be beaten, it’s such an unusual thing to be able to share the endurance sport experience so intimately with a buddy, but I also think there’s a place in long-distance swimrun for the solo racer. There'd better be, anyway, as I appear to have won a place to do it all again in 2022 ;-).</p>
+
+<p><em>Sarah King<br>November 2021 </em></p>
 <div class="post-nav">
-  <a href="../blog.html" class="back">← All race reports</a>
+  <a href="../blog.html" class="back">← All posts</a>
   <a href="../index.html">Back to site →</a>
 </div>
 </article>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Kit Do I Need? — Söuthsea Swimrun</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+:root{--black:#080808;--white:#ffffff;--accent:#00D44A;--accent-light:#00eb52;--accent-pale:#e6fff0;--sand:#f0f0f0;--sand-dark:#d0d0d0;--text-muted:#555555;--radius:4px;--font-display:'Bebas Neue',sans-serif;--font-body:'DM Sans',sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);background:var(--white);color:var(--black);overflow-x:hidden;font-size:16px;line-height:1.7;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1rem 2.5rem;background:rgba(10,10,10,0.93);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,0.07);}
+.nav-logo{font-family:var(--font-display);font-size:1.4rem;color:var(--white);letter-spacing:0.08em;text-decoration:none;}
+.nav-logo span{color:var(--accent);}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center;}
+.nav-links a{font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,242,235,0.7);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover{color:var(--white);}
+.nav-cta{background:var(--accent)!important;color:var(--white)!important;padding:0.4rem 1rem;border-radius:var(--radius);}
+.hero{min-height:50vh;background:var(--black);display:flex;flex-direction:column;justify-content:flex-end;padding:0 2.5rem 3.5rem;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0.35;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,1) 0%,rgba(8,8,8,0.5) 50%,rgba(8,8,8,0.15) 100%);}
+.hero-inner{position:relative;max-width:860px;}
+.hero-tag{display:inline-block;font-size:0.65rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:0.2rem 0.7rem;border-radius:var(--radius);margin-bottom:1rem;}
+.hero-title{font-family:var(--font-display);font-size:clamp(2.5rem,6vw,4.5rem);color:var(--white);line-height:1;letter-spacing:0.02em;margin-bottom:0.75rem;}
+.hero-year{font-size:0.8rem;color:rgba(255,255,255,0.35);font-weight:300;letter-spacing:0.1em;}
+article{max-width:760px;margin:0 auto;padding:4rem 2rem 6rem;}
+article p{color:#333;font-size:1rem;line-height:1.85;margin-bottom:1.4rem;font-weight:300;}
+article h2,article h3,article h4{font-family:var(--font-display);letter-spacing:0.02em;margin:2.5rem 0 1rem;color:var(--black);}
+article h2{font-size:2rem;}
+article h3{font-size:1.6rem;}
+article h4{font-size:1.3rem;}
+article img{width:100%;height:auto;border-radius:2px;margin:1.5rem 0;display:block;}
+article ul,article ol{padding-left:1.5rem;margin-bottom:1.4rem;}
+article li{color:#333;font-size:1rem;line-height:1.8;font-weight:300;margin-bottom:0.3rem;}
+article a{color:var(--accent);text-decoration:underline;text-underline-offset:3px;}
+article a:hover{color:var(--accent-light);}
+article em{font-style:italic;}
+article strong{font-weight:500;}
+article blockquote{border-left:3px solid var(--accent);padding:0.5rem 1.5rem;margin:1.5rem 0;color:var(--text-muted);font-style:italic;}
+.img-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:0.75rem;margin:1.5rem 0;}
+.img-gallery img{margin:0;}
+.post-nav{border-top:1px solid var(--sand-dark);margin-top:3rem;padding-top:2rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.post-nav a{font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--black);text-decoration:none;border-bottom:1px solid var(--black);padding-bottom:2px;transition:color 0.2s;}
+.post-nav a:hover{color:var(--accent);border-color:var(--accent);}
+.post-nav a.back{color:var(--text-muted);border-color:var(--sand-dark);}
+footer{background:var(--black);padding:2rem 2.5rem;border-top:1px solid rgba(255,255,255,0.07);}
+.footer-inner{max-width:860px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-copy{font-size:0.78rem;color:rgba(245,242,235,0.25);font-weight:300;}
+.footer-links{display:flex;gap:1.5rem;}
+.footer-links a{font-size:0.75rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(245,242,235,0.4);text-decoration:none;transition:color 0.2s;}
+.footer-links a:hover{color:var(--white);}
+.footer-links a.green{color:var(--accent);}
+@media(max-width:768px){nav{padding:1rem 1.5rem;}.hero{padding:0 1.5rem 2.5rem;}article{padding:3rem 1.5rem 5rem;}footer{padding:1.5rem;}.nav-links li:not(:last-child){display:none;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo">SÖS<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="../blog.html">← All posts</a></li>
+    <li><a href="https://heylo.com/invite/5VCbcSYC" target="_blank" class="nav-cta">Join Us</a></li>
+  </ul>
+</nav>
+<div class="hero">
+  <div class="hero-bg" style="background-image:url('https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/swimrun-kit-shot1.jpg');"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <span class="hero-tag">Swimrun Blog</span>
+    <h1 class="hero-title">What Kit Do I Need?</h1>
+    <span class="hero-year">Söuthsea Swimrun</span>
+  </div>
+</div>
+<article>
+<ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><img src="https://raw.githubusercontent.com/southseaswimrun/sos/main/southsea-site/images/swimrun-kit-shot1.jpg" alt="" loading="lazy" style="max-width:100%;height:auto;margin:1rem 0;display:block;"></li><li class="blocks-gallery-item"></li></ul>
+
+<p>If you’ve watched swimrun race videos or seen people running along your local beach or coastal trail looking like a bunch of crazy super heroes, you’d be forgiven for seeing a lack of kit as a hindrance to getting into swimrun. However, think again. We’ve broken it down into separate lists of essential kit and “nice to haves” so you can get out swimrunning as soon as possible.</p>
+<h4><strong>Essential Kit—I want to give it a go, but what do I actually need?</strong></h4>
+<h5><strong><em>Wetsuit</em></strong></h5>
+<p>This will vary depending on where you are in the world and what time of year it is. In the summer, you can get out there in your swimsuit, trisuit, or just some close-fitting running kit, but as the water and air temperatures take a turn for the chilly, I’d really recommend some neoprene unless you are the hardiest and most appropriately acclimatised of outdoor swimmers.</p>
+<p>Maybe have a go in your regular swimming wetsuit, you’ll be toasty, but at least you can work out whether you like the sport enough to invest in a special swimrun wetsuit. Or, if you have an old wetsuit that’s just getting dusty in the cupboard, cut down the arms and legs, and have a go in that.</p>
+<p>Once you are finally ready to buy a suit there are a ridiculous number of brands to choose from, at a broad range of prices and with a variety of technical features, examples being Ark, Orca, Head, Zone3, Colting, dhb, Blueseventy, Huub and Aquasphere. Keep an eye out for sale bargains, ask your buddies what they like about their suits, and check out the <a href="http://worldofswimrun.com/the-2019-official-swimrun-wetsuit-test-a-new-era-in-swimrun-wetsuit-development/">World of Swimrun’s 2019 gear test</a> for a good overview.&nbsp;&nbsp; &nbsp;</p>
+<h5><strong><em>Trainers (and socks)</em></strong></h5>
+<p>At first you just need a pair of running shoes you don’t mind jumping into open water in. Preferably they’ll be lightweight and suit whatever terrain you are trying out the sport in, e.g. road or trail. Wear socks, otherwise they will rub (especially if you are swimming in salty water) and you won’t enjoy it.</p>
+<p>Swimrun shoe selection is a complex one. Everyone has different needs as to the level of support they require in a shoe and terrain will also dictate your choice. Swimrun is traditionally an off-road sport, so you’ll need a lightweight trail shoe. A couple of brands have started developing swimrun-specific shoes, like Vivobarefoot, but barefoot running isn’t for everyone, or rather, everyone’s physiology isn’t made for barefoot running. Major brands you’ll see at races include Innov8, Icebug (Scandinavian brand), and Solomon.&nbsp;</p>
+<h5><strong><em>Swim hat</em></strong></h5>
+<p>Safety first, you need to be visible. So pop on a nice bright swim hat so other water users can see you.</p>
+<h5><strong><em>Goggles</em></strong></h5>
+<p>I guess if you don’t mind swimming without, you can always invest later, but as a contact lens wearer, these are a must for me. Your regular pool goggles will do, but again there is an incredible range of open water goggles out there. You’ll need to figure out for yourself what fits your face shape. Good brands include Zoggs, Speedo, Head and Blueseventy.</p>
+<h4><strong>Nice to Have</strong></h4>
+<h5><strong><em>Pull buoy</em></strong></h5>
+<p>You’re swimming in your shoes, so your feet and legs will drag (unless you have a ridiculously buoyant bum!). You’re allowed to swim with a pull buoy to counteract that drag, but remember you also need to run with it between swims. You can just buy a regular swim pull buoy, but to stop it floating away or you having to carry it in your hands whilst running, you will need to work out a way of attaching it to yourself. You can fasten it to your upper thigh using triathlon laces, or use elastic rope to attach it to your waist. Google “swimrun pull buoy modification” for a selection of YouTube videos for how to do this.</p>
+<p>Ark, sponsors of Ötillö, have a range of frankly <a href="https://www.arksports.com/en-int/swimrun/gear/">mahoosive pull buoys</a> designed specifically for swimrun.&nbsp;</p>
+<h5><strong><em>Hand paddles</em></strong></h5>
+<p>And to counteract the fact you now can’t kick because your legs are clasped together holding your pull buoy, you can use hand paddles for swimming. Unless you train regularly with paddles in the pool, I’d recommend building up gradually in open water. Start with smaller paddles over shorter distances. I’d recommend paddles that use tubing at both the wrist and middle finger to attach to your hand as they are better for swimming in choppy seas and also mean you can still use your hands to position your goggles, fix your swim hat, and stow your pull buoy whilst getting in and out of your swims without losing them.</p>
+<h5><strong><em>Calf guards</em></strong></h5>
+<p>Some people prefer to counteract their loss of leg buoyancy using neoprene calf guards rather than a pull buoy (or as well as). Some swimrun wetsuits come with guards, otherwise you can buy them separately online. They will generally have thicker neoprene on one side to give your legs extra lift. They also help to keep you warm at colder events (long compression style socks can also do this) and protect you from nettles and prickly plants on off-road runs and whilst entering and exiting the water.</p>
+<h5><strong><em>Kangaroo tops</em></strong></h5>
+<p>Basically a vest that goes under your wetsuit that has a number of pockets in which you can store stuff as you swimrun. These are great if you are racing as you’ll have nutrition, a whistle, cup/flask, and a bandage (mandatory kit at most events) that all need to be stored somewhere about your person. Some kangaroo tops even have pockets big enough to stow your hand paddles when you are running.</p>
+<p>The best one on the market is probably the Ark vest, but it also comes with a premium price. Head also produce one, which does the job and is half the price.</p>
+<h5><strong><em>Cups and soft flasks</em></strong></h5>
+<p>To save the environment and be Covid-compliant you’ll need to carry your own collapsible cup or flask so you can re-hydrate at aid stations.</p>
+<h5><strong><em>Tether</em></strong></h5>
+<p>If you’re racing as a pair, you are allowed to tether yourself together. This makes a massive difference on the swim if one of you is a significantly better swimmer than the other as your weaker member can tuck in behind and draft off the other. Some suits already have loops for connecting the tether rope with a carabiner, but some tethers will also come with two belts and hoops.</p>
+<div class="post-nav">
+  <a href="../blog.html" class="back">← All posts</a>
+  <a href="../index.html">Back to site →</a>
+</div>
+</article>
+<footer>
+  <div class="footer-inner">
+    <p class="footer-copy">© Söuthsea Swimrun 2025</p>
+    <div class="footer-links">
+      <a href="../blog.html">Blog</a>
+      <a href="http://instagram.com/southsea.swimrun" target="_blank">Instagram</a>
+      <a href="https://heylo.com/invite/5VCbcSYC" target="_blank" class="green">Join on Heylo</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
